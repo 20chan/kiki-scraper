@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kiki-shared", "kiki-shared\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kiki-viewer", "kiki-viewer\kiki-viewer.csproj", "{BF78D0CF-489A-4A21-8724-72FDECAEB7E1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kiki-server", "kiki-server\kiki-server.csproj", "{2DDCF9A5-A2D9-4BE8-BB19-38C8EFD7707E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,5 +27,9 @@ Global
 		{BF78D0CF-489A-4A21-8724-72FDECAEB7E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF78D0CF-489A-4A21-8724-72FDECAEB7E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF78D0CF-489A-4A21-8724-72FDECAEB7E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DDCF9A5-A2D9-4BE8-BB19-38C8EFD7707E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DDCF9A5-A2D9-4BE8-BB19-38C8EFD7707E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DDCF9A5-A2D9-4BE8-BB19-38C8EFD7707E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DDCF9A5-A2D9-4BE8-BB19-38C8EFD7707E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

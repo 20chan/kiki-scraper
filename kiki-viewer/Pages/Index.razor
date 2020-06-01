@@ -1,6 +1,6 @@
 ﻿@page "/"
 @using kiki.shared
-@inject KiKiDBContext kiki
+@inject HttpClient Http
 
 @if (posts == null) {
     <p><em>loading</em></p>
@@ -27,9 +27,9 @@
 }
 
 @code {
-    List<Post> posts;
+    Post[] posts;
 
     protected override async Task OnInitializedAsync() {
-        posts = await kiki.GetAllPosts();
+        posts = await Http.GetJsonAsync<Post[]>("/api/kiki/posts");
     }
 }
