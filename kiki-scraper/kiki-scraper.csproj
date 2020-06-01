@@ -1,5 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
+    <ItemGroup>
+      <ProjectReference Include="..\kiki-shared\kiki-shared.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="HtmlAgilityPack" Version="1.11.24" />
+    </ItemGroup>
+
     <PropertyGroup>
         <OutputType>Exe</OutputType>
         <TargetFramework>netcoreapp3.1</TargetFramework>
