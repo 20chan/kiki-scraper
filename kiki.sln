@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kiki-scraper", "kiki-scraper\kiki-scraper.csproj", "{D7A5016D-D1E2-4DD3-97E1-6B62374935A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kiki-viewer", "kiki-viewer\kiki-viewer.csproj", "{596F7E70-A184-444B-ACE4-7C22C7C345BF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D7A5016D-D1E2-4DD3-97E1-6B62374935A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7A5016D-D1E2-4DD3-97E1-6B62374935A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7A5016D-D1E2-4DD3-97E1-6B62374935A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7A5016D-D1E2-4DD3-97E1-6B62374935A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{596F7E70-A184-444B-ACE4-7C22C7C345BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{596F7E70-A184-444B-ACE4-7C22C7C345BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{596F7E70-A184-444B-ACE4-7C22C7C345BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{596F7E70-A184-444B-ACE4-7C22C7C345BF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
