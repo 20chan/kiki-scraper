@@ -7,21 +7,7 @@
 } else {
     <div class="accordion">
         @foreach (var post in posts) {
-            <div class="card">
-                <div class="card-header">
-                    <h2 class="mb-0">
-                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="collapse@post.Id" aria-expanded="true" aria-controls="collapse@post.Id">
-                            @post.Title
-                        </button>
-                    </h2>
-                </div>
-
-                <div id="collapse@post.Id">
-                    <div class="card-body">
-                        @post.Content
-                    </div>
-                </div>
-            </div>
+            <PostCard Post="@post"></PostCard>
         }
     </div>
 }
