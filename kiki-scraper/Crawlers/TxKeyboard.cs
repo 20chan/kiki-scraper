@@ -23,7 +23,7 @@ namespace kiki.scraper.Crawlers {
                     var idx = HttpUtility.ParseQueryString(href).Get("idx");
                     var notice = a.SelectSingleNode("em[contains(@class, 'notice')]");
                     var isNotice = 0 < a.SelectNodes("em[contains(@class, 'notice')]").Count;
-                    var title = post.SelectSingleNode("span").InnerText.Trim();
+                    var title = a.SelectSingleNode("span").InnerText.Trim();
                     var author = post.SelectSingleNode("li[contains(@class, 'author')]").InnerText.Trim();
                     var time = DateTime.Parse(post.SelectSingleNode("li[@class='time']").GetAttributeValue("title", "").Trim());
                     var views = post.SelectSingleNode("li[contains(@class, 'views')]").InnerText.Trim();
