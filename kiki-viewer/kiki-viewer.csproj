@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
+    <RootNamespace>kiki.viewer</RootNamespace>
     <RazorLangVersion>3.0</RazorLangVersion>
   </PropertyGroup>
 
