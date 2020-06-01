@@ -1,8 +1,9 @@
-using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 
 namespace kiki.shared {
     public class Community {
-        public ObjectId Id { get; set; }
+        [BsonId]
+        public int Id { get; set; }
         public string Name { get; set; }
     }
 }
