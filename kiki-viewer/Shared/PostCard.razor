@@ -1,24 +1,27 @@
 ﻿@using kiki.shared
 
-<div class="card">
-    <div class="card-header">
-        <h2 class="mb-0">
-            <button class="btn btn-link collapsed" type="button" @onclick="Toggle">
-                @Post.Title
-            </button>
-        </h2>
-    </div>
-
-    <div class="@CollapseCss">
-        <div class="card-body">
+<tr>
+    <th @onclick="Toggle" scope="row">@Post.Id.Increment</th>
+    <th @onclick="Toggle" scope="row">@CommunityName</th>
+    <td @onclick="Toggle">@Post.PostId</td>
+    <td @onclick="Toggle">@Post.Title</td>
+    <td @onclick="Toggle">@Post.Author</td>
+    <td @onclick="Toggle">@Post.WrittenDate</td>
+    <td><a class="btn btn-primary" href="@Post.Url">Go</a></td>
+</tr>
+<tr class="@CollapseCss">
+    <td colspan="6">
+        <div style="white-space: pre-line;">
             @Post.Content
         </div>
-    </div>
-</div>
+    </td>
+</tr>
 
 @code {
     [Parameter]
     public Post Post { get; set; }
+    [Parameter]
+    public string CommunityName { get; set; }
     public bool collapse = true;
 
     private string CollapseCss => collapse ? "collapse" : null;

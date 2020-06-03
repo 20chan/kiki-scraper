@@ -21,5 +21,11 @@ namespace kiki.server.Controllers {
         public async Task<IEnumerable<Post>> GetPosts() {
             return await db.GetAllPosts();
         }
+
+        [HttpGet]
+        [Route("communities")]
+        public async Task<IEnumerable<Community>> GetCommunities() {
+            return await db.GetAllCommunities();
+        }
     }
 }

@@ -28,13 +28,15 @@ namespace kiki.scraper.Crawlers {
                     var time = DateTime.Parse(post.SelectSingleNode("li[@class='time']").GetAttributeValue("title", "").Trim());
                     var views = post.SelectSingleNode("li[contains(@class, 'views')]").InnerText.Trim();
 
-                    var contentHtml = await Html.ParseGetAsync(BuildNoticePostUrl(idx));
+                    var postUrl = BuildNoticePostUrl(idx);
+                    var contentHtml = await Html.ParseGetAsync(postUrl);
                     var content = ParseContent(contentHtml);
                     var comments = ParseComments(contentHtml);
 
                     var p = new Post {
                         Community = communityId,
                         ScrappedDate = DateTime.Now,
+                        Url = postUrl,
                         PostId = idx,
                         Title = title,
                         Author = author,

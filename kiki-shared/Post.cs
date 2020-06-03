@@ -9,6 +9,7 @@ namespace kiki.shared {
         public ObjectId Community { get; set; }
         public DateTime ScrappedDate { get; set; }
 
+        public string Url { get; set; }
         public string PostId { get; set; }
         public string Title { get; set; }
         public string Author { get; set; }

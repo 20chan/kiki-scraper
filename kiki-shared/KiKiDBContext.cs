@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using MongoDB.Bson;
 using MongoDB.Driver;
 
 namespace kiki.shared {
@@ -25,7 +26,7 @@ namespace kiki.shared {
         public async Task<Community> GetCommunityOfName(string name) {
             var result = await FilterCommunity(CommunityFilter.Eq(c => c.Name, name));
             if (result == null) {
-                await AddCommunity(new Community(name));
+                await AddCommunity(new Community { Name = name });
                 return await GetCommunityOfName(name);
             }
             return result;

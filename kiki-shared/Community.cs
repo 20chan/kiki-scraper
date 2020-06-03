@@ -6,9 +6,5 @@ namespace kiki.shared {
         [BsonId]
         public ObjectId Id { get; set; }
         public string Name { get; set; }
-
-        public Community(string name) {
-            Name = name;
-        }
     }
 }
