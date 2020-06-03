@@ -16,6 +16,8 @@ namespace kiki.shared {
         public DateTime WrittenDate { get; set; }
         public string Content { get; set; }
 
+        public int Views { get; set; }
+        public int CommentCount { get; set; }
         public Comment[] Comments { get; set; }
     }
 }

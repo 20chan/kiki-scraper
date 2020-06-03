@@ -44,8 +44,8 @@ namespace kiki.shared {
             return await FilterPosts(PostFilter.Empty);
         }
 
-        public async Task<Post> GetPostOfPostId(string postId) {
-            return await FilterPost(PostFilter.Eq(p => p.PostId, postId));
+        public async Task<Post> GetPostOfPostId(ObjectId communityId, string postId) {
+            return await FilterPost(PostFilter.Eq(p => p.PostId, postId) & PostFilter.Eq(p => p.Community, communityId));
         }
 
         public async Task<List<Post>> GetPostsOfCommunity(string community) {

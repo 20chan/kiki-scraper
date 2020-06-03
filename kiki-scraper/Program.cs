@@ -12,7 +12,7 @@ namespace kiki.scraper {
             };
 
             var db = new KiKiDBContext();
-            var interval = 60;
+            var interval = 60000;
             var crawlers = new List<Crawler>();
             foreach (var arg in args) {
                 if (!builders.TryGetValue(arg, out var builder)) {
@@ -20,6 +20,12 @@ namespace kiki.scraper {
                     return;
                 }
                 crawlers.Add(builder(db, interval));
+                Console.WriteLine($"model registed: {arg}");
+            }
+
+            if (crawlers.Count == 0) {
+                Console.WriteLine("any model not registed; exiting");
+                return;
             }
 
             foreach (var crawler in crawlers) {
@@ -27,10 +33,12 @@ namespace kiki.scraper {
             }
 
             foreach (var crawler in crawlers) {
-                crawler.ManualCrawl();
+                crawler.Start();
             }
 
-            Console.ReadLine();
+            while (true) {
+                Console.ReadLine();
+            }
         }
     }
 }
