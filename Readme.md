@@ -1,3 +1,3 @@
-# kiki
+# kiki-scraper
 
-Community crawler, post hooker
+Community crawler
